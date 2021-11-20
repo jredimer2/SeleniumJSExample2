@@ -2,7 +2,8 @@
 Example test suite using Selenium for NodeJS
 
 ### Step 1: Install NodeJS
-Ensure NodeJS is in the path. In a cmd prompt, type "node -v" to test if it is.
+Goto https://nodejs.org/en/ and install the LTS version.
+After installing, test that NodeJs has been installed successfully by typing "node --version" in a CMD window.
 
 ### Step 2: Clone repository from Github 
 git clone https://github.com/jredimer2/SeleniumJSExample2.git
