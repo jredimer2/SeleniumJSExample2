@@ -1,4 +1,4 @@
-# SeleniumJSExample
+# SeleniumJSExample2
 Example test suite using Selenium for NodeJS
 
 ### Step 1: Install NodeJS

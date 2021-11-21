@@ -3,7 +3,7 @@ const { Builder, By, Key } = require("selenium-webdriver");
 const assert = require('assert')
 
 
-class ebayHome {
+class JupiterShop {
     constructor(driver) {
         this.driver = driver
     }
@@ -86,4 +86,4 @@ class ebayHome {
 }
 
 
-module.exports = { ebayHome }
+module.exports = { JupiterShop }
