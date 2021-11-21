@@ -30,7 +30,7 @@ const testData = [{
 
 async function testFillOutContactPage(i) {
     try {
-        await sleep(100);  // slight delay before starting tests
+        await sleep(100);  // minimum 100 msec delay
 
         var driver = await new Builder().forBrowser("chrome").build();
         await driver.manage().setTimeouts({ implicit: 3000, pageLoad: 5000, script: 5000 });
@@ -48,8 +48,8 @@ async function testFillOutContactPage(i) {
         await jupiterContact.clickSubmit();
         await jupiterContact.waitForThankYou();
 
-        await sleep(100);  // slight delay before calling driver.quit()
-        driver.quit();
+        await sleep(50);  // minimum 50 msec delay
+        driver.close();
 
     } catch (err) {
         console.log('Main error ', err)
