@@ -1,7 +1,5 @@
-
 const { Builder, By, Key } = require("selenium-webdriver");
-const assert = require('assert')
-const { ts } = require("./timer")
+const { Assertions } = require("./Utilities")
 
 class JupiterContact {
     constructor(driver) {
@@ -98,12 +96,14 @@ class JupiterContact {
         }
     }
 
-    async waitForThankYou() {
+    async validateThankYou(forename, surname) {
         try {
+            const assert = new Assertions();
             this.driver.manage().setTimeouts({ implicit: 20000 });
             await this._thankYou();
+            console.log(`Testing ${forename} ${surname} - ` + await assert.verify({expected: true, actual: true}, '\'Thank You\' message appears -'));
         } catch (err) {
-            console.error(err)
+            console.log(`Testing ${forename} ${surname} - ` + await assert.verify({expected: true, actual: false}, '\'Thank You\' message appears -'));
         } finally {
             this.driver.manage().setTimeouts({ implicit: 3000 });
         }

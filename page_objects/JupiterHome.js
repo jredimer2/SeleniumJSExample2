@@ -1,7 +1,5 @@
 
 const { Builder, By, Key } = require("selenium-webdriver");
-const assert = require('assert')
-const { ts } = require("./timer")
 
 class JupiterHome {
     
@@ -11,9 +9,7 @@ class JupiterHome {
 
     async gotoUrl() {
         try {
-            console.log('JupiterHomel::gotoUrl  tp-1')
             await this.driver.get("https://jupiter.cloud.planittesting.com/#/home")
-            console.log('JupiterHomel::gotoUrl  tp-2')
         } catch (err) {
             console.error(err)
         }
@@ -43,10 +39,17 @@ class JupiterHome {
         }
     }
 
+    async _cart() {
+        try {
+            return await this.driver.findElement(By.xpath("//a[@href='#/cart']"))
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
     async navigateToHomePage() {
         try {
-           var hl = await this._home();
-           await hl.click();
+           await (await this._home()).click();
         } catch (err) {
             console.error(err)
         }
@@ -62,15 +65,15 @@ class JupiterHome {
 
     async navigateToContactPage() {
         try {
-            console.log('JupiterHomel::navigateToContactPage  tp-1')
-
             await (await this._contact()).click(); 
+        } catch (err) {
+            console.error(err)
+        }
+    }
 
-            console.log('JupiterHomel::navigateToContactPage  tp-2')
-
-
-            // const fl = await driver.findElement(By.xpath("//input[@id='forename']"));
-            // await fl.sendKeys('123');
+    async navigateToCartPage() {
+        try {
+            await (await this._cart()).click(); 
         } catch (err) {
             console.error(err)
         }

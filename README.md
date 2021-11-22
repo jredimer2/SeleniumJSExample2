@@ -1,5 +1,15 @@
 # SeleniumJSExample2
-Example test suite using Selenium for NodeJS
+Example test suite using Selenium for NodeJS. I prefer to use NodeJS with Selenium as the resulting test suite
+tend to run ultra fast, and ultra stable. It is definitely a solution for large scale test automation.
+
+This test suite uses the traditional Page Object Model pattern. It runs tests in sequence. 
+
+Possible improvements: 
+1. Store test data in a separate file or database.
+2. Run tests in parallel.
+3. Use a unit test framework for easy integration with CI/CD environment.
+4. Use a reporting engine (eg., Extent Reports)
+5. Use Selenium Webdriver Service so that tests can be run remotely.
 
 ### Step 1: Install NodeJS
 Goto https://nodejs.org/en/ and install the LTS version.
@@ -15,4 +25,4 @@ For example: CD C:\Git\SeleniumJSExample2
 In the Command Prompt window, type "npm install"
 
 ### Step 5: Run the test
-In the Command Prompt window, type "node test"
+In the Command Prompt window, type "node testcases"
