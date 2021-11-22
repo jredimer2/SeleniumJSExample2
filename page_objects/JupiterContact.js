@@ -9,7 +9,6 @@ class JupiterContact {
     async _forename() {
         try {
             return await this.driver.findElement(By.id("forename"))
-            //return await driver.findElement(By.xpath("//input[@id='forename']"))
         } catch (err) {
             console.error(err)
         }
