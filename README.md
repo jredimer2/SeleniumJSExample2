@@ -1,6 +1,5 @@
 # SeleniumJSExample2
-Example test suite using Selenium for NodeJS. I prefer to use NodeJS with Selenium as the resulting test suite
-tend to run ultra fast, and ultra stable. It is definitely a solution for large scale test automation.
+Example test suite using Selenium for NodeJS. 
 
 This test suite uses the traditional Page Object Model pattern. It runs tests in sequence. 
 
